@@ -1,7 +1,7 @@
 // backend/dbConnect.js
 import mongoose from "mongoose";
 
-const MONGODB_URI ="mongodb+srv://jenishdecodex:Jenish0609@jenishbgmi.snj3keb.mongodb.net/jenish_bgmi?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 async function dbConnect() {
   if (mongoose.connection.readyState >= 1) return;
